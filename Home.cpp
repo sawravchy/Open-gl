@@ -3,11 +3,12 @@
 
 void display(void)
 {
-
+/*	clear all pixels  */
 	glClear(GL_COLOR_BUFFER_BIT);
 
-
+ 
     //Upper Lines///////
+
         glBegin(GL_LINES);
         glColor3f(0.1f, 0.1f, 0.1f);
 		glVertex2f (-0.61, 0.0);//Left up
@@ -27,6 +28,16 @@ void display(void)
         glColor3f(0.1f, 0.1f, 0.1f);
 		glVertex2f (-0.64, -0.03);//Left up
         glVertex2f (0.64, -0.03);//Right up
+        glEnd();
+                glBegin(GL_LINES);
+        glColor3f(0.1f, 0.1f, 0.1f);
+		glVertex2f (-0.65, -0.04);//Left up
+        glVertex2f (0.65, -0.04);//Right up
+        glEnd();
+                        glBegin(GL_LINES);
+        glColor3f(0.1f, 0.1f, 0.1f);
+		glVertex2f (-0.66, -0.05);//Left up
+        glVertex2f (0.66, -0.05);//Right up
         glEnd();
 //Quad
 
@@ -87,20 +98,27 @@ void display(void)
         glVertex2f (0.3, -0.36);//Right down
         glVertex2f (0.5, -0.36);//Left down
         glEnd();
-//Window Door
+//Door
     glBegin(GL_POLYGON);
-        glColor3f(255,255,0);
+        glColor3f(1.0,1.0,0.0);
 		glVertex2f (-0.15, -0.15);//Left up
         glVertex2f (0.15, -0.15);//Right up
         glVertex2f (0.15, -0.7);//Right down
         glVertex2f (-0.15, -0.7);//Left down
         glEnd();
-//Window Door 2
+
+//Door below lines
+glBegin(GL_LINES);
+glColor3f(0.1f, 0.1f, 0.1f);
+glVertex2f (0.6, -0.70);//Right down
+glVertex2f (-0.6, -0.70);//Left down
+glEnd();
+//Door 2
     glBegin(GL_POLYGON);
         glColor3f(0.1f, 0.1f, 0.1f);
 		glVertex2f (-0.15, -0.15);//Left up
         glVertex2f (0.07, -0.22);//Right up
-        glVertex2f (0.07, -0.7);//Right down
+        glVertex2f (0.07, -0.63);//Right down
         glVertex2f (-0.15, -0.7);//Left down
         glEnd();
 //Triangle
@@ -146,13 +164,30 @@ void display(void)
 		glVertex2f (-0.67, -0.77);//Left up
         glVertex2f (0.67, -0.77);//Right up
         glEnd();
+                glColor3f(0.35f, 0.16f, 0.14f);
+		glVertex2f (-0.68, -0.78);//Left up
+        glVertex2f (0.68, -0.78);//Right up
+        glEnd();
+                        glColor3f(0.35f, 0.16f, 0.14f);
+		glVertex2f (-0.69, -0.79);//Left up
+        glVertex2f (0.69, -0.79);//Right up
+        glEnd();
+                        glColor3f(0.35f, 0.16f, 0.14f);
+		glVertex2f (-0.7, -0.80);//Left up
+        glVertex2f (0.7, -0.80);//Right up
+        glEnd();
+                                glColor3f(0.35f, 0.16f, 0.14f);
+		glVertex2f (-0.71, -0.81);//Left up
+        glVertex2f (0.71, -0.81);//Right up
+        glEnd();
+
 
    glFlush();
 }
 
 void init (void)
 {
-
+/* select clearing color 	*/
    glClearColor (24, 24, 21,1);}
 
 
@@ -162,7 +197,7 @@ int main()
    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);  //Mode for later glutCreateWindow() call
    glutInitWindowSize (700, 700);
    glutInitWindowPosition (400,400);
-   glutCreateWindow(" © Copyright Sawrav Chowdhury");
+   glutCreateWindow(" Â© Copyright Sawrav Chowdhury");
    init();
 
    glutDisplayFunc(display);

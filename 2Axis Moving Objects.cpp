@@ -57,6 +57,7 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
 
     glLoadIdentity();
+
     ////////////////////////////////////////////
     glColor3f(0.95f, 0.0f, 0.0f);
 
@@ -109,6 +110,18 @@ void display()
     glVertex3f(2.0,x_position+6.0, 0.0);//right down
 
     glVertex3f(2.5, x_position+7.0, 0.0);//right up
+    glEnd();
+    /////////////////////Over Flow///////////////////////
+            glBegin(GL_POLYGON);
+    glColor3f(0.50f, 0.15f, 1.0f);
+    glVertex3f(-15.0,-1.0, 0.0);//left up
+
+    glVertex3f(-15.0,-17.0, 0.0);//left down
+
+    glVertex3f(15.0,-17.0, 0.0);//right down
+
+    glVertex3f(15.0, -1.0, 0.0);//right up
+
     glEnd();
 
     /////////////////SHIP///////////////////////
@@ -234,4 +247,3 @@ void timer(int)
     }
 
 }
-

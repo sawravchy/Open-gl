@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
     glutInitWindowSize(500,500);
 
-    glutCreateWindow("window 1");
+    glutCreateWindow(" © Copyright Sawrav Chowdhury");
 
     glutDisplayFunc(display);
 

@@ -55,7 +55,7 @@ int main()
    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);  //Mode for later glutCreateWindow() call
    glutInitWindowSize (600, 600);
    glutInitWindowPosition (100,100);
-   glutCreateWindow(" Hexagon using two Quad");
+   glutCreateWindow("  © Copyright Sawrav Chowdhury");
    init();
 
    glutDisplayFunc(display);

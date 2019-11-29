@@ -109,7 +109,7 @@ int main(int argc,char** argv)
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowPosition(0,0);
     glutInitWindowSize(600,600);
-    glutCreateWindow("POLYGON");
+    glutCreateWindow("© Sawrav Chowdhury");
     myinit();
     glutDisplayFunc(polySegment);
     glutMainLoop();
